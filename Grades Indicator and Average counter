@@ -1,0 +1,38 @@
+//Count Grades Average and Give Indicator
+#include <iostream>
+using namespace std;
+int main() {
+    float nilai=0, rata, jumlah; //nilai means grades, rata means average, jumlah means sum
+    int x=-1;//x is amount of data and it's valued -1 so that the calculation is right
+    cout<<"Enter the grades and enter '-1' when done\n";
+    while (nilai != -1){
+        cout<<"Enter grades number "<<x+2<<"\n";
+        jumlah = jumlah+nilai;
+        cin>>nilai;
+        x++;
+    }
+    cout<<"---------------\n";
+    rata = jumlah/x; //count the average
+    //Indicator grouping
+    if (rata>=96 && 100>=rata)
+    cout<<"A+\n";
+    else if (rata>=91 && 95>=rata)
+    cout<<"A\n";
+    else if (rata>=86 && 90>=rata)
+    cout<<"B+\n";
+    else if (rata>=81 && 85>=rata)
+    cout<<"B\n";
+    else if (rata>=76 && 80>=rata)
+    cout<<"B-\n";
+    else if (rata>=71 && 75>=rata)
+    cout<<"C+\n";
+    else if (rata>=66 && 70>=rata)
+    cout<<"C\n";
+    else if (rata>=61 && 65>=rata)
+    cout<<"C-\n";
+    else if (rata>=0 && 60>=rata)
+    cout<<"D\n";
+    else cout<<"Data Invalid\n";
+    cout<<"Grades Average ="<<rata;
+    return 0;
+}
